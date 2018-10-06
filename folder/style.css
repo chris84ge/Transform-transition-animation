@@ -14,12 +14,40 @@ linear - constant speed throughout the animation; often best for color or opacit
 	background-color: blue;
 }
 
+.wrapper {
+	margin: 40px 50px;
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	position: relative;
+	perspective: 100px;
+}
+
 .box2:hover {
-	transition: width 3s;
+	transition: width 4s;
 	width: 250px;
 }
 
-.box3 {
+.box2a:hover {
+	transition: width 4s;
+	width: 250px;
+	transition-timing-function: ease;
+}
+
+.box2b:hover {
+	transition: width 4s;
+	width: 250px;
+	transition-timing-function: ease-in;
+}
+
+.box2c:hover {
+	transition: width 4s;
+	width: 250px;
+	transition-timing-function: ease-out;
+}
+
+.box3:hover {
+	transition: 3s;
 	transform: rotate(25deg);
 }
 
@@ -28,8 +56,9 @@ linear - constant speed throughout the animation; often best for color or opacit
 	transform-origin: 75% 205%;
 }
 
-.box5 {
+.box5:hover {
 	transform: translate(100px, 50px);
+	transition: 3s;
 }
 
 .box6 {
@@ -42,6 +71,18 @@ linear - constant speed throughout the animation; often best for color or opacit
 
 .box8 {
 	transform: rotate(15deg) scale(0.5, 0.5);
+}
+
+.box9:hover {
+	animation-name: ccb;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	transform: translate(150px, 0px);
+	transition: 6s;
+}
+
+.box10 {
+	position: absolute;
 }
 
 h4 {
@@ -57,4 +98,12 @@ h4 {
 	50% {color: yellow;}
 	75% {color: hotpink;}
 	90% {color: blue;}
+}
+
+@keyframes ccb {
+	10% {background-color: red;}
+	25% {background-color: green;}
+	50% {background-color: yellow;}
+	75% {background-color: hotpink;}
+	90% {background-color: blue;}
 }
